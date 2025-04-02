@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.info-head {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-section,
+.calculation-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.info-section h3,
+.calculation-section h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input,
+select,
+button {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 100%;
+    display: inline-block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container button {
+    margin: 12px;
+    width: 48%;
+    background-color: #22BB33;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #47934b;
+}
+
+.home_btn {
+    background-color: #BB2124;
+    color: white;
+}
+
+.home_btn:hover {
+    background-color: #9e1c20;
+}
+
+.table-container {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #555;
+    font-weight: bold;
+}
+
+td input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-sections {
+        flex-direction: column;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .button-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .info-section h3,
+    .calculation-section h3 {
+        font-size: 18px;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 14px;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+}

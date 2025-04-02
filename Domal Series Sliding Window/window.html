@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <title>Domal Series Sliding Window - Shubham Sliding Window</title>
+
+    <link rel="stylesheet" href="window.css">
+    <script src="window.js"></script>
+</head>
+
+<body>
+    <section id="client_information">
+        <!-- <h1 class="text-center">Shubham Sliding Window</h1> -->
+        <div class="container">
+            <div class="info-head">
+                <h1>Shubham Sliding Window</h1>
+                <h5>Professional Sliding Window Installation Services</h5>
+                <br class="user-select-none">
+                <h4>Domal Series Sliding Window</h4>
+            </div>
+            <div class="form-sections">
+                <!-- Personal Information Section -->
+                <div class="info-section">
+                    <h3>PERSONAL INFORMATION</h3>
+                    <label for="name">NAME:</label>
+                    <input type="text" id="name" placeholder="Client Name">
+                    <label for="location">ADDRESS:</label>
+                    <input type="text" id="location" placeholder="Client Address">
+                    <label for="series" hidden>SERIES:</label>
+                    <input type="text" id="series" value="Domal Series Sliding Window" hidden>
+                    <label for="colour">Colour:</label>
+                    <select id="colour" onchange="toggleInputColour()">
+                        <option value="Off White">Off White</option>
+                        <option value="Ivory">Ivory</option>
+                        <option value="Black">Black</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Light Grey">Light Grey</option>
+                        <option value="Dark Grey">Dark Grey</option>
+                        <option value="Custom Colour">Custom Colour</option>
+                    </select>
+                    <input type="text" id="custom_colour" style="display: none;" placeholder="Enter colour details" />
+                    <label for="glass">Glass:</label>
+                    <select id="glass" onchange="toggleInputGlass()">
+                        <option value="Invalid Glass Input">Invalid Glass Input</option>
+                        <option value="5mm Plain Glass">5mm Plain Glass</option>
+                        <option value="4mm Plain Glass">4mm Plain Glass</option>
+                        <option value="4mm Golden One-Way Glass">4mm Golden One-Way Glass</option>
+                        <option value="4mm Blue One-Way Glass">4mm Blue One-Way Glass</option>
+                        <option value="Custom Glass">Custom Glass</option>
+                    </select>
+                    <input type="text" id="custom_glass" style="display: none;" placeholder="Enter glass details" />
+                </div>
+
+                <!-- Calculation Inputs Section -->
+                <div class="calculation-section">
+                    <h3>WINDOW INFORMATION</h3>
+                    <label for="num1">LENGTH ( inch )</label>
+                    <input type="number" id="num1" onkeypress="focusNext(event, 'num2')">
+
+                    <label for="num2">HEIGHT ( inch )</label>
+                    <input type="number" id="num2" onkeypress="focusNext(event, 'operation')">
+
+                    <label for="operation">OPERATION ( TRACK = GLASS + MESH )</label>
+                    <select id="operation" onkeypress="focusNext(event, 'addButton')">
+                        <option value="2T = 2G">2T = 2G</option>
+                        <option value="2T = 4G">2T = 4G</option>
+                        <option value="3T = 2G+1M">3T = 2G+1M</option>
+                        <option value="3T = 3G">3T = 3G</option>
+                        <option value="3T = 4G+2M">3T = 4G+2M</option>
+                    </select>
+
+                    <div class="button-container">
+                        <button onclick="addRow()" id="addButton">Get Size</button>
+                        <button onclick="deleteSelectedRows()">Delete Rows</button>
+                        <button onclick="promptAndDownloadPDF()">Download PDF</button>
+                    </div>
+                    <button onclick="window.location.href='../index.html'" class="home_btn">Go to Home</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="resultTable">
+                    <thead>
+                        <tr id="headerRow">
+                            <th>#</th>
+                            <th>Operation</th>
+                            <th>Length</th>
+                            <th>Height</th>
+                            <th>Top Bottom</th>
+                            <th>Handle</th>
+                            <th>Glass Size</th>
+                            <th>Mesh Size</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- New rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
