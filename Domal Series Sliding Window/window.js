@@ -26,7 +26,7 @@ function addRow() {
   // Perform calculations based on selected operations
   switch (operation) {
     case "2T = 2G":
-      bottom = val1 - 0.37;
+      bottom = val1 - 0.375;
       top_bottom = bottom / 2;
       handle_interlock = val2 - 2.75;
       glass_length = top_bottom - 4.5;
@@ -47,7 +47,7 @@ function addRow() {
       break;
 
     case "2T = 4G":
-      bottom = val1 + 2.37;
+      bottom = val1 + 1.96;
       top_bottom = bottom / 4;
       handle_interlock = val2 - 2.75;
       glass_length = top_bottom - 4.5;
@@ -68,7 +68,7 @@ function addRow() {
       break;
 
     case "3T = 2G+1M":
-      bottom = val1 - 0.37;
+      bottom = val1 - 0.375;
       top_bottom = bottom / 2;
       handle_interlock = val2 - 2.75;
       glass_length = top_bottom - 4.5;
@@ -110,7 +110,7 @@ function addRow() {
       break;
 
     case "3T = 4G+2M":
-      bottom = val1 + 2.37;
+      bottom = val1 + 1.96;
       top_bottom = bottom / 4;
       handle_interlock = val2 - 2.75;
       glass_length = top_bottom - 4.5;
